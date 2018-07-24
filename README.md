@@ -13,6 +13,7 @@ Main Screen using LinearLayout
 
 Further Activities using ListViews and inflated using WordAdaptor.java
 <br/>
-<img src="Screenshot2.png" width="360" height="640" alt="Screenshot 2"/>
 <br/>
+<img src="Screenshot2.png" width="360" height="640" alt="Screenshot 2"/>
+<br/><br/>
 <img src="Screenshot3.png" width="360" height="640" alt="Screenshot 3"/>
