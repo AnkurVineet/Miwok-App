@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(colorsIntent);
             }
         });
+
         TextView familyTextview = findViewById(R.id.family);
         familyTextview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(familyIntent);
             }
         });
+
         TextView phrasesTextview = findViewById(R.id.phrases);
         phrasesTextview.setOnClickListener(new View.OnClickListener() {
             @Override
