@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(numbersIntent);
             }
         });
+
         TextView colorsTextview = findViewById(R.id.colors);
         colorsTextview.setOnClickListener(new View.OnClickListener() {
             @Override
