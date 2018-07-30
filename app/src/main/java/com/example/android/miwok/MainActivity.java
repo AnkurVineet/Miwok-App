@@ -18,10 +18,12 @@ package com.example.android.miwok;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewParent;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -35,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPager viewPager = findViewById(R.id.viewpager);
         SimpleFragmentPagerAdaptor adaptor = new SimpleFragmentPagerAdaptor(getSupportFragmentManager());
-
         viewPager.setAdapter(adaptor);
+
+        TabLayout tabLayout = findViewById(R.id.fixed_tabs);
+        tabLayout.setupWithViewPager(viewPager);
+
     }
 }
