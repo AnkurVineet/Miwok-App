@@ -18,8 +18,10 @@ package com.example.android.miwok;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.ViewParent;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,40 +32,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
-        TextView numbersTextview = findViewById(R.id.numbers);
-        numbersTextview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent numbersIntent = new Intent(MainActivity.this, NumbersActivity.class);
-                startActivity(numbersIntent);
-            }
-        });
 
-        TextView colorsTextview = findViewById(R.id.colors);
-        colorsTextview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
-                startActivity(colorsIntent);
-            }
-        });
+        ViewPager viewPager = findViewById(R.id.viewpager);
+        SimpleFragmentPagerAdaptor adaptor = new SimpleFragmentPagerAdaptor(getSupportFragmentManager());
 
-        TextView familyTextview = findViewById(R.id.family);
-        familyTextview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent familyIntent = new Intent(MainActivity.this, FamilyActivity.class);
-                startActivity(familyIntent);
-            }
-        });
-
-        TextView phrasesTextview = findViewById(R.id.phrases);
-        phrasesTextview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);
-                startActivity(phrasesIntent);
-            }
-        });
+        viewPager.setAdapter(adaptor);
     }
 }
